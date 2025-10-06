@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComradeWallet Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js" defer></script>
+
+</head>
+<body>
+    <div class="header">
+        <!-- Time removed as requested -->
+    </div>
+    <div class="greeting">
+        Good Morning<br>Welcome back!
+        <span class="sun-icon"></span>
+    </div>
+    <div class="card-container">
+        <div class="total-expenses">
+            Total Expenses
+            <div class="amount">KES 0</div>
+            <div class="updated">Updated Oct 6, 2025</div>
+            <div class="eye-icon"></div>
+        </div>
+        <div class="small-card">
+            <div class="icon"></div>
+            This Month<br><span>KES 0</span>
+        </div>
+        <div class="small-card orange">
+            <div class="icon"></div>
+            This Week<br><span>KES 0</span>
+        </div>
+    </div>
+    <div class="quick-actions">Quick Actions</div>
+    <div class="action-cards">
+        <div class="action-card green">
+            <div class="icon"></div>
+            Add Expense<br>Track spending
+        </div>
+        <div class="action-card">
+            <div class="icon"></div>
+            View Analytics<br>Insights & trends
+        </div>
+    </div>
+    <div class="recent-transactions">
+        Recent Transactions
+        <a href="#" class="see-all" onclick="event.preventDefault(); document.querySelector('.transaction-list').classList.toggle('active');">See All</a>
+    </div>
+    <div class="transaction-list">
+        <div class="transaction-item">Transaction 1 - KES 500 - Oct 5, 2025</div>
+        <div class="transaction-item">Transaction 2 - KES 300 - Oct 4, 2025</div>
+        <div class="transaction-item">Transaction 3 - KES 150 - Oct 3, 2025</div>
+    </div>
+    <div class="nav">
+        <a href="#" class="active">
+            <div class="icon"></div>
+            Dashboard
+        </a>
+        <a href="#">
+            <div class="icon"></div>
+            Analytics
+        </a>
+        <a href="#">
+            <div class="icon">+</div>
+        </a>
+    </div>
+</body>
+</html>

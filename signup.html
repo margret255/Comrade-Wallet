@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComradeWallet</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+    <link rel="stylesheet" href="signup.css" />
+    <script src="signup.js"></script>
+ 
+</head>
+<body>
+  <div class="logo">ComradeWallet</div>
+
+
+
+  <div class="container" id="formContainer">
+    <div class="header">Welcome to ComradeWallet</div>
+    <div class="subheader">Track it. Save it. Own it.</div>
+
+    <div class="tabs">
+      <div class="tab" onclick="switchTab('signIn')">Sign In</div>
+      <div class="tab active" onclick="switchTab('signUp')">Sign Up</div>
+    </div>
+
+    <!-- SIGN UP FORM -->
+    <div id="signUpForm" class="form-section">
+      <div class="input-group">
+        <input type="text" id="fullName" placeholder="Full Name" />
+        <div class="error" id="fullNameError">Full Name is required.</div>
+      </div>
+      <div class="input-group">
+        <input type="email" id="email" placeholder="Email" />
+        <div class="error" id="emailError">Valid email is required.</div>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Password" />
+        <div class="error" id="passwordError">
+          Password must be at least 6 characters.
+        </div>
+      </div>
+      <div class="input-group">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+        <div class="error" id="confirmPasswordError">
+          Passwords do not match.
+        </div>
+      </div>
+      <button class="action-btn" onclick="signUp()">Sign Up</button>
+      <div class="success" id="signUpSuccess">
+        Sign up successful! Redirecting...
+      </div>
+    </div>
+
+    <!-- SIGN IN FORM -->
+    <div id="signInForm" class="form-section" style="display: none">
+      <div class="input-group">
+        <input type="email" id="loginEmail" placeholder="Email" />
+        <div class="error" id="loginEmailError">Valid email is required.</div>
+      </div>
+      <div class="input-group">
+        <input type="password" id="loginPassword" placeholder="Password" />
+        <div class="error" id="loginPasswordError">Incorrect password.</div>
+      </div>
+      <button class="action-btn" onclick="signIn()">Sign In</button>
+      <div class="success" id="signInSuccess">
+        Sign in successful! Redirecting...
+      </div>
+    </div>
+  </div>
+
+  <!-- THEME TOGGLE -->
+  <button id="theme-toggle"><i id="theme-icon" class="fas fa-moon"></i></button>
+
+  <script>
+ 
+  </script>
+</body>
+</html>

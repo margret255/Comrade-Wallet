@@ -1,0 +1,211 @@
+
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0a0a0a, #000);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* GLOW BACKGROUND ANIMATION */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #00ffcc, transparent 60%);
+      top: -100px;
+      right: -100px;
+      filter: blur(100px);
+      opacity: 0.3;
+      animation: glow 6s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.2);
+      }
+    }
+
+    /* CONTAINER */
+    .container {
+      position: relative;
+      background: rgba(20, 20, 20, 0.8);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 40px 30px;
+      width: 360px;
+      box-shadow: 0 0 25px rgba(0, 255, 200, 0.1);
+      text-align: center;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-weight: 700;
+      font-size: 18px;
+      color: #00ffcc;
+      letter-spacing: 1px;
+    }
+
+    .get-started {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .get-started button {
+      background: linear-gradient(135deg, #00ff99, #00b3ff);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .get-started button:hover {
+      opacity: 0.8;
+    }
+
+    .header {
+      font-size: 28px;
+      font-weight: 600;
+      color: #00ffcc;
+      margin-bottom: 5px;
+    }
+
+    .subheader {
+      font-size: 14px;
+      color: #bfbfbf;
+      margin-bottom: 25px;
+    }
+
+    /* TABS */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+      gap: 10px;
+    }
+
+    .tab {
+      padding: 10px 18px;
+      border-radius: 20px;
+      background: #222;
+      cursor: pointer;
+      color: #bbb;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .tab.active {
+      background: linear-gradient(135deg, #00ffcc, #00b3ff);
+      color: #000;
+      font-weight: 600;
+    }
+
+    /* INPUTS */
+    .input-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #00ffcc;
+      box-shadow: 0 0 8px #00ffcc66;
+    }
+
+    button.action-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #00ffcc, #00b3ff);
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      font-weight: 600;
+      color: #000;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button.action-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .error {
+      color: #ff5555;
+      font-size: 12px;
+      display: none;
+      margin-top: 5px;
+    }
+
+    .success {
+      color: #00ff99;
+      font-size: 13px;
+      margin-top: 10px;
+      display: none;
+    }
+
+    /* LIGHT/DARK TOGGLE */
+    #theme-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: #00ffcc;
+    }
+
+    #theme-toggle:hover {
+      transform: rotate(20deg);
+      background: #00ffcc;
+      color: #000;
+    }
+
+    body.light-mode {
+      background: #f9f9f9;
+      color: #111;
+    }
+
+    body.light-mode .container {
+      background: rgba(255, 255, 255, 0.8);
+      color: #111;
+    }
+
+    body.light-mode input {
+      background: rgba(0, 0, 0, 0.05);
+      color: #111;
+    }
+  

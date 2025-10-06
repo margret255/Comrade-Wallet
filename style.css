@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: #000;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.btn-primary {
+  background: #00c46a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #002d24, #191023);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+  color: #bfbfbf;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+}
+
+.btn-green, .btn-dark {
+  padding: 12px 25px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-green {
+  background: #00c46a;
+  color: white;
+}
+
+.btn-dark {
+  background: #1a1a1a;
+  color: white;
+  margin-left: 10px;
+}
+
+/* Features */
+.features {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+}
+
+.features p {
+  color: #bfbfbf;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #202020;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #00c46a, #a855f7);
+  color: white;
+  border-radius: 12px;
+  margin: 3rem 2rem;
+}
+
+.cta h2 {
+  font-size: 2rem;
+}
+
+.btn-purple {
+  background: #a855f7;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #000;
+  color: #bfbfbf;
+  font-size: 0.9rem;
+}
